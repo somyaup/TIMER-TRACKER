@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>BOOTY TRACKER</title>
+	<!--/ /-------- Normalize CSS --------/ /-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	
+	<!--/ /-------- Google Fonts --------/ /-->
+	<link href="https://fonts.googleapis.com/css?family=Oswald|PT+Sans&display=swap" rel="stylesheet">
+	
+	<!--/ /-------- My Styles --------/ /-->
+	<link href="../static/styles.css" rel="stylesheet">
+	<!--img src="visualise.jpg" id='stats'/-->
+    <script src='../static/timecount.js' defer></script>
+</head>
+<!-- onload function is evoke when page is load -->
+<!--countdown function is called when page is loaded -->
+  
+<body >
+    <h1>Timer+tracker</h1>
+    <blockquote>
+        <p align=left>Today        :: <b id='Edate'>00</b></p>
+        <p align=left>Timer Count  :: <b id='Ecount'>00</b></p>
+        <p align=left>Work minutes :: <b id='Emin'>00</b></p>
+        <p align=left>Break minutes:: <b id='Ebmin'>00</b></p>
+        
+    </blockquote>
+    <div class="container top">
+    	<p>Type in a number of minutes.</p>
+        <form method="post" id="convert">
+        	<input type="text" name="distance" id="distance" placeholder="minutes">
+            <input type="submit" name="convertdist" value="Start">
+        </form>
+        <form method="post" id="unconvert">
+            <input type="submit" name="unconvertdist" value="Stop">
+        </form>
+        <form method="post" id="type">
+            <input type="submit" name="breaktime" value="Break">
+        </form>
+        Time Left ::
+        <input id="minutes" type="text" >
+        <input id="seconds" type="text" >
+    </div>
+    <div class="container bottom" id="answer">
+    	<h2 class="invisible">[{-----------------}]</h2>
+    </div>
+    <div class="container table" id="log">
+    	<table id='my-table', align ='center', style="background-color: rgb(207, 74, 118);">
+            <thead>
+                <tr>
+                    <th>Date  : </th>
+                    <th>  LapCount : </th>
+                    <th>  Minutes : </th>
+                    <th>  Break<br></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <button id="Export">Export</button>
+</body>
+  
+</html>
